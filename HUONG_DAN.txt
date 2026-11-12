@@ -1,0 +1,33 @@
+WEBSITE LỚP 11/1 – THCS-THPT SƠN VỌNG
+
+1. Xem thử:
+- Mở file index.html bằng Chrome hoặc trình duyệt trên máy tính/điện thoại.
+
+2. Đưa website lên mạng miễn phí bằng GitHub Pages:
+- Đăng ký/đăng nhập https://github.com
+- Tạo repository mới, ví dụ: lop-11-1-son-vong
+- Chọn Public, sau đó Create repository.
+- Upload file index.html trong thư mục này lên repository (đặt ngay ở thư mục gốc).
+- Vào Settings > Pages.
+- Ở mục Build and deployment, chọn Deploy from a branch.
+- Chọn branch main và folder /(root), bấm Save.
+- Chờ GitHub xuất bản, địa chỉ thường có dạng:
+  https://TEN-TAI-KHOAN.github.io/lop-11-1-son-vong/
+
+3. Tùy chỉnh:
+- Mở index.html bằng trình soạn thảo code.
+- Tìm các mục "Thành viên", "Hoạt động", "Bảng thành tích" trong phần seed để thay dữ liệu mẫu.
+- Thư viện ảnh mẫu đang dùng ảnh minh họa trực tuyến; có thể thay URL ảnh bằng link ảnh của lớp.
+
+LƯU Ý QUAN TRỌNG:
+- Mật khẩu quản trị demo là 1111. Đây chỉ là khóa giao diện phía trình duyệt, KHÔNG phải bảo mật thật. Ai biết cách xem mã nguồn đều có thể tìm ra mật khẩu.
+- Dữ liệu quản trị và lời nhắn hiện lưu bằng localStorage trên từng thiết bị/trình duyệt. Vì vậy thay đổi trên máy của bạn không tự đồng bộ cho các bạn khác.
+- Muốn quản trị an toàn và chia sẻ dữ liệu/ lời nhắn giữa mọi người cần thêm backend và xác thực thật (ví dụ Firebase). Không nhập mật khẩu riêng tư, số điện thoại, địa chỉ nhà hoặc thông tin nhạy cảm của học sinh lên website công khai.
+- Nên xin phép các bạn trước khi đăng ảnh và thông tin cá nhân.
+
+CẬP NHẬT ẢNH / VIDEO / SPOTIFY:
+- 4 ảnh bạn gửi đã được thêm vào thư mục assets và hiển thị trong Thư viện ảnh.
+- Video bạn gửi đã được thêm vào mục Video kỷ niệm.
+- Để thêm nhạc Spotify: mở website > Quản trị > đăng nhập mật khẩu demo 1111 > dán link bài hát hoặc playlist từ Spotify (open.spotify.com) > Lưu Spotify.
+- Spotify hiển thị trình phát nhúng. Người xem cần bấm Play; website không thể đảm bảo tự phát nhạc khi vừa mở vì giới hạn autoplay của trình duyệt và quyền điều khiển của Spotify.
+- Khi tải lên GitHub Pages, hãy tải cả file index.html và nguyên thư mục assets lên repository, không chỉ tải riêng index.html.

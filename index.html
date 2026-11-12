@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d1b">
+<meta name="description" content="Website lớp 11/1 – THCS-THPT Sơn Vọng. Nơi lưu giữ những khoảnh khắc thanh xuân.">
+<title>11/1 • THCS-THPT SƠN VỌNG</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap');
+:root{--bg:#080d1b;--panel:#101a2d;--panel2:#14213a;--line:#263754;--text:#edf4ff;--muted:#9aabc5;--blue:#4b9cff;--cyan:#54e1ed;--purple:#9275ff;--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#172b4e 0,transparent 35%),var(--bg);color:var(--text);font-family:'Be Vietnam Pro',Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#080d1be8;backdrop-filter:blur(16px);border-bottom:1px solid #263754}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--purple));display:grid;place-items:center;box-shadow:0 8px 30px #4b9cff55}.logo span{font-size:17px;font-weight:900}.navlinks{display:flex;gap:22px;align-items:center;color:var(--muted);font-size:13px}.navlinks a:hover{color:white}.menu{display:none;background:none;color:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.hero{padding:90px 0 70px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-100px;top:10px;background:#4b9cff20;filter:blur(30px);pointer-events:none}.eyebrow{color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(38px,7vw,76px);line-height:1.08;letter-spacing:-2px;margin:18px 0}.gradient{background:linear-gradient(90deg,#fff,#77c7ff 45%,#a996ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:650px;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:700;color:#06101f;background:linear-gradient(100deg,#5ab2ff,#72e3ed);box-shadow:0 8px 28px #4b9cff30}.btn.secondary{background:#17243a;color:var(--text);border:1px solid var(--line);box-shadow:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px;max-width:680px}.stat{padding:18px;border:1px solid var(--line);background:#101a2dbb;border-radius:16px}.stat strong{display:block;font-size:26px}.stat span{color:var(--muted);font-size:12px}
+section{padding:60px 0;scroll-margin-top:80px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.section-head h2{font-size:clamp(25px,4vw,36px);margin:6px 0 0}.section-head p{color:var(--muted);margin:0;font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,#14213a,#0e1729);border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:.25s;min-width:0}.card:hover{transform:translateY(-4px);border-color:#4b9cff88;box-shadow:0 16px 40px #0003}.member-top{display:flex;align-items:center;gap:14px}.avatar{width:52px;height:52px;border-radius:17px;background:linear-gradient(135deg,#2867a8,#755bd4);display:grid;place-items:center;font-size:20px;font-weight:800;flex-shrink:0}.member h3,.card h3{margin:0;font-size:16px}.member small,.muted{color:var(--muted);font-size:12px}.tag{display:inline-block;border:1px solid #31517a;color:#9bcaff;background:#152d4a;padding:4px 9px;border-radius:30px;font-size:11px;margin-top:12px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo{height:205px;border-radius:17px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#152b4c,#30285c);position:relative}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}.photo:hover img{transform:scale(1.05)}.photo span{position:absolute;bottom:0;left:0;right:0;padding:24px 14px 12px;background:linear-gradient(transparent,#050914d9);font-size:13px;font-weight:700}
+.event{display:flex;gap:16px}.date{width:58px;flex-shrink:0;border-radius:14px;background:#1c3150;text-align:center;padding:8px}.date b{display:block;font-size:21px;color:#8bdcff}.date small{font-size:10px;color:var(--muted)}.event p{margin:5px 0;color:var(--muted);font-size:12px}
+.achievement{display:flex;align-items:center;gap:14px}.medal{width:44px;height:44px;border-radius:14px;background:#342d1d;display:grid;place-items:center;font-size:22px}
+.message-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}\n.spotify-frame{width:100%;height:152px;border:0;border-radius:14px;background:#101a2d}.video-frame{width:100%;border-radius:16px;border:1px solid var(--line);background:#050914}.message{background:#111e33;border:1px solid var(--line);border-radius:15px;padding:16px}.message p{margin:8px 0;color:#d7e3f5;font-size:13px}.message small{color:var(--muted)}
+.formbox{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{width:100%;border:1px solid var(--line);border-radius:12px;background:#0b1425;color:white;padding:12px;outline:none}.field:focus{border-color:var(--blue)}textarea.field{min-height:105px;resize:vertical}.full{grid-column:1/-1}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px;text-align:center}
+.overlay{position:fixed;inset:0;background:#020611d9;display:none;place-items:center;z-index:50;padding:18px}.overlay.show{display:grid}.modal{width:min(620px,100%);max-height:90vh;overflow:auto;background:#101a2d;border:1px solid var(--line);border-radius:20px;padding:24px}.modal-head{display:flex;justify-content:space-between;align-items:center}.close{background:none;border:0;color:white;font-size:24px}.admin-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.notice{font-size:12px;color:#f6cc7c;background:#392d17;border:1px solid #6c5528;padding:12px;border-radius:12px;margin:12px 0}.hidden{display:none!important}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#dff8ff;color:#071321;padding:11px 17px;border-radius:12px;font-weight:700;font-size:13px;z-index:100;display:none}
+@media(max-width:800px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#0b1425;padding:18px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.hero{padding:65px 0 45px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:21px}.grid,.gallery,.message-list{grid-template-columns:1fr}.photo{height:220px}.formbox{grid-template-columns:1fr}.full{grid-column:auto}.section-head{align-items:flex-start;flex-direction:column}.admin-tools{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><div class="logo"><span>11</span></div><span>11/1 <span style="color:#6dbbff">SƠN VỌNG</span></span></a>
+<nav class="navlinks" id="navlinks"><a href="#about">Giới thiệu</a><a href="#members">Thành viên</a><a href="#gallery">Thư viện ảnh</a><a href="#activities">Hoạt động</a><a href="#honors">Thành tích</a><a href="#music">Spotify</a><a href="#messages">Lời nhắn</a></nav>
+<div style="display:flex;gap:8px"><button class="menu" id="menuBtn">☰</button><button class="btn secondary" style="padding:9px 12px" id="adminOpen">Quản trị</button></div>
+</div></header>
+<main>
+<div class="wrap">
+<section class="hero" id="home">
+<div class="eyebrow">✦ Một tập thể • Một hành trình • Ngàn kỷ niệm</div>
+<h1><span class="gradient">LỚP 11/1</span><br>THCS-THPT SƠN VỌNG</h1>
+<p>Chào mừng bạn đến với góc nhỏ của chúng mình — nơi lưu giữ những gương mặt thân quen, những hoạt động đáng nhớ và cả thanh xuân rực rỡ dưới mái trường Sơn Vọng.</p>
+<div class="actions"><a class="btn" href="#members">Khám phá lớp mình ↗</a><a class="btn secondary" href="#gallery">Xem khoảnh khắc</a></div>
+<div class="stats"><div class="stat"><strong id="memberCount">0</strong><span>Thành viên</span></div><div class="stat"><strong id="eventCount">0</strong><span>Hoạt động</span></div><div class="stat"><strong>11/1</strong><span>Mãi là một nhà</span></div></div>
+</section>
+<section id="about"><div class="section-head"><div><div class="eyebrow">ABOUT US</div><h2>Chúng mình là 11/1</h2></div><p>Không chỉ là một lớp học, mà còn là một gia đình.</p></div><div class="card"><p style="margin:0;color:#c7d5e9">Mỗi ngày đến trường là một ngày đáng nhớ. Từ những tiết học, giờ ra chơi đến các hoạt động tập thể, tất cả tạo nên câu chuyện riêng của lớp 11/1. Website này được tạo ra để mọi người cùng chia sẻ, lưu giữ và tự hào về hành trình ấy.</p></div></section>
+<section id="members"><div class="section-head"><div><div class="eyebrow">OUR PEOPLE</div><h2>Thành viên lớp</h2></div><p>Những mảnh ghép làm nên tập thể 11/1.</p></div><div class="grid" id="memberGrid"></div></section>
+<section id="gallery"><div class="section-head"><div><div class="eyebrow">MEMORIES</div><h2>Thư viện ảnh</h2></div><p>Thay ảnh mẫu bằng ảnh thật của lớp nhé.</p></div><div class="gallery" id="galleryGrid">
+<div class="photo"><img alt="Khoảnh khắc lớp học" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=900"><span>Những ngày đến lớp</span></div>
+<div class="photo"><img alt="Bạn bè" src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=900"><span>Thanh xuân bên nhau</span></div>
+<div class="photo"><img alt="Sân trường" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900"><span>Mái trường thân yêu</span></div>
+</div></section>
+<section id="activities"><div class="section-head"><div><div class="eyebrow">CLASS ACTIVITIES</div><h2>Hoạt động nổi bật</h2></div><p>Cùng nhau tạo nên những kỷ niệm đẹp.</p></div><div class="grid" id="eventGrid"></div></section>
+<section id="honors"><div class="section-head"><div><div class="eyebrow">ACHIEVEMENTS</div><h2>Bảng thành tích</h2></div><p>Ghi nhận nỗ lực của tập thể và từng thành viên.</p></div><div class="grid" id="honorGrid"></div></section>
+<section id="music"><div class="section-head"><div><div class="eyebrow">CLASS PLAYLIST</div><h2>Nhạc nền Spotify</h2></div><p>Bật playlist và nghe cùng những kỷ niệm của 11/1.</p></div><div class="card"><div id="spotifyBox"><p class="muted">Quản trị viên có thể dán link bài hát hoặc playlist Spotify trong phần Quản trị để hiển thị trình phát tại đây.</p></div><p class="muted" style="margin-bottom:0">Lưu ý: Spotify cần người xem bấm phát; trình duyệt thường chặn tự động phát nhạc khi mở website.</p></div></section>
+<section id="video"><div class="section-head"><div><div class="eyebrow">CLASS VIDEO</div><h2>Video kỷ niệm</h2></div><p>Một thước phim lưu giữ khoảnh khắc của lớp.</p></div><div class="card"><video class="video-frame" controls playsinline preload="metadata"><source src="assets/video-ky-niem.mp4" type="video/mp4">Trình duyệt không hỗ trợ video.</video></div></section>
+<section id="messages"><div class="section-head"><div><div class="eyebrow">LEAVE A NOTE</div><h2>Gửi lời nhắn</h2></div><p>Một lời động viên cũng đủ làm ngày vui hơn.</p></div>
+<div class="card" style="margin-bottom:16px"><form id="messageForm" class="formbox"><input class="field" id="msgName" placeholder="Tên của bạn" maxlength="35" required><input class="field" id="msgTitle" placeholder="Tiêu đề (không bắt buộc)" maxlength="50"><textarea class="field full" id="msgText" placeholder="Viết lời nhắn dễ thương của bạn..." maxlength="300" required></textarea><button class="btn full" type="submit">Gửi lời nhắn ✦</button></form></div><div class="message-list" id="messageGrid"></div>
+</section>
+</div></main>
+<footer><div class="wrap">© 2026 • LỚP 11/1 – THCS-THPT SƠN VỌNG<br><span>Được tạo bằng tình yêu dành cho tập thể 11/1 ✦</span></div></footer>
+<div class="overlay" id="adminModal"><div class="modal"><div class="modal-head"><div><div class="eyebrow">CONTROL CENTER</div><h2 style="margin:4px 0">Quản trị website</h2></div><button class="close" id="adminClose">×</button></div>
+<div id="loginArea"><p class="muted">Đăng nhập để chỉnh sửa nội dung hiển thị trên trình duyệt này.</p><input class="field" id="adminPass" type="password" placeholder="Mật khẩu quản trị"><button class="btn" style="margin-top:12px;width:100%" id="loginBtn">Đăng nhập</button><div class="notice">Mật khẩu demo mặc định: <b>1111</b>. Hãy đọc lưu ý bảo mật trong hướng dẫn trước khi đăng website công khai.</div></div>
+<div id="adminArea" class="hidden"><p class="muted">Thêm nội dung nhanh. Dữ liệu được lưu trong trình duyệt bằng localStorage.</p>
+<div class="admin-tools"><input class="field" id="newMember" placeholder="Tên thành viên"><input class="field" id="newRole" placeholder="Vai trò / biệt danh"><button class="btn" id="addMember">＋ Thêm thành viên</button><input class="field" id="newEvent" placeholder="Tên hoạt động"><button class="btn" id="addEvent">＋ Thêm hoạt động</button><input class="field" id="newHonor" placeholder="Thành tích / giải thưởng"><button class="btn" id="addHonor">＋ Thêm thành tích</button><input class="field" id="newPhoto" placeholder="Dán URL ảnh https://..."><button class="btn" id="addPhoto">＋ Thêm ảnh</button><input class="field" id="spotifyLink" placeholder="Dán link Spotify bài hát / playlist"><button class="btn" id="saveSpotify">♫ Lưu Spotify</button></div>
+<div class="actions"><button class="btn secondary" id="exportData">Xuất dữ liệu JSON</button><button class="btn secondary" id="resetData">Khôi phục mẫu</button><button class="btn secondary" id="logoutBtn">Đăng xuất</button></div>
+</div></div></div><div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const seed={
+ members:[{name:"Lớp trưởng",role:"Đại diện tập thể",icon:"★"},{name:"Thành viên 02",role:"Học sinh 11/1",icon:"✦"},{name:"Thành viên 03",role:"Học sinh 11/1",icon:"✧"}],
+ events:[{title:"Ngày hội đến trường",desc:"Cùng nhau khởi động một năm học mới với thật nhiều năng lượng.",date:"THÁNG 9",day:"05"},{title:"Hoạt động tập thể",desc:"Đồng hành, sẻ chia và phối hợp để tạo nên một tập thể gắn kết.",date:"THÁNG 10",day:"20"},{title:"Khoảnh khắc đáng nhớ",desc:"Lưu lại những điều giản dị nhưng đáng quý trong năm học.",date:"THÁNG 11",day:"12"}],
+ honors:[{title:"Tập thể đoàn kết",desc:"Cùng phấn đấu, hỗ trợ nhau trong học tập và hoạt động.",icon:"🏆"},{title:"Nỗ lực học tập",desc:"Mỗi thành viên tiến bộ từng ngày.",icon:"📘"},{title:"Tinh thần năng động",desc:"Tích cực tham gia các phong trào của trường.",icon:"⚡"}],
+ photos:[]
+};
+let data;try{data=JSON.parse(localStorage.getItem("sonvong_class_data"))||structuredClone(seed)}catch(e){data=JSON.parse(JSON.stringify(seed))}
+let spotifyUrl=localStorage.getItem("sonvong_spotify_url")||"";
+function spotifyEmbed(url){
+ try{
+  const u=new URL(url);
+  if(!["open.spotify.com","www.open.spotify.com"].includes(u.hostname)) return "";
+  const parts=u.pathname.split("/").filter(Boolean);
+  if(parts.length<2 || !["track","album","playlist","episode","show"].includes(parts[0])) return "";
+  return "https://open.spotify.com/embed/"+parts[0]+"/"+parts[1]+"?utm_source=generator";
+ }catch(e){return ""}
+}
+let messages;try{messages=JSON.parse(localStorage.getItem("sonvong_class_messages"))||[{name:"Một thành viên 11/1",title:"Gửi cả lớp",text:"Chúc tập thể chúng mình có thật nhiều kỷ niệm đẹp và luôn đoàn kết nhé!",time:"Lời nhắn mẫu"}]}catch(e){messages=[]}
+function save(){localStorage.setItem("sonvong_class_data",JSON.stringify(data))}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function render(){
+ $("#memberCount").textContent=data.members.length;$("#eventCount").textContent=data.events.length;
+ $("#memberGrid").innerHTML=data.members.map(m=>`<article class="card member"><div class="member-top"><div class="avatar">${esc(m.icon||m.name.charAt(0))}</div><div><h3>${esc(m.name)}</h3><small>${esc(m.role||"Học sinh 11/1")}</small></div></div><span class="tag">THÀNH VIÊN 11/1</span></article>`).join("");
+ $("#eventGrid").innerHTML=data.events.map(e=>`<article class="card event"><div class="date"><b>${esc(e.day||"✦")}</b><small>${esc(e.date||"HOẠT ĐỘNG")}</small></div><div><h3>${esc(e.title)}</h3><p>${esc(e.desc||"Một hoạt động đáng nhớ của lớp.")}</p></div></article>`).join("");
+ $("#honorGrid").innerHTML=data.honors.map(h=>`<article class="card achievement"><div class="medal">${esc(h.icon||"🏅")}</div><div><h3>${esc(h.title)}</h3><div class="muted">${esc(h.desc||"Thành tích của lớp")}</div></div></article>`).join("");
+ const base=[["assets/anh-01.jpg","Giờ học và những trang vở"],["assets/anh-02.jpg","Góc sân trường Sơn Vọng"],["assets/anh-03.jpg","Tập thể lớp 11/1"],["assets/anh-04.jpg","Hoạt động và kỷ niệm của lớp"]];
+ $("#galleryGrid").innerHTML=[...base,...data.photos.map(p=>[p.url,p.title||"Khoảnh khắc 11/1"])].map(p=>`<div class="photo"><img loading="lazy" src="${esc(p[0])}" alt="${esc(p[1])}" onerror="this.style.display='none'"><span>${esc(p[1])}</span></div>`).join("");
+ const embed=spotifyEmbed(spotifyUrl);
+ $("#spotifyBox").innerHTML=embed?`<iframe class="spotify-frame" src="${embed}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`:`<p class="muted">Chưa cài playlist Spotify. Vào Quản trị → dán link Spotify → Lưu Spotify.</p>`;
+ $("#messageGrid").innerHTML=messages.slice().reverse().map(m=>`<article class="message"><b>${esc(m.title||"Lời nhắn từ 11/1")}</b><p>${esc(m.text)}</p><small>— ${esc(m.name)} · ${esc(m.time||"")}</small></article>`).join("");
+}
+function toast(t){$("#toast").textContent=t;$("#toast").style.display="block";setTimeout(()=>$("#toast").style.display="none",2400)}
+render();
+$("#menuBtn").onclick=()=>$("#navlinks").classList.toggle("open");
+$("#navlinks").querySelectorAll("a").forEach(a=>a.onclick=()=>$("#navlinks").classList.remove("open"));
+$("#adminOpen").onclick=()=>$("#adminModal").classList.add("show");$("#adminClose").onclick=()=>$("#adminModal").classList.remove("show");
+$("#adminModal").addEventListener("click",e=>{if(e.target===$("#adminModal"))$("#adminModal").classList.remove("show")});
+$("#loginBtn").onclick=()=>{if($("#adminPass").value==="1111"){$("#loginArea").classList.add("hidden");$("#adminArea").classList.remove("hidden");toast("Đăng nhập thành công")}else toast("Mật khẩu chưa đúng")};
+$("#logoutBtn").onclick=()=>{$("#adminArea").classList.add("hidden");$("#loginArea").classList.remove("hidden");$("#adminPass").value=""};
+$("#addMember").onclick=()=>{let n=$("#newMember").value.trim();if(!n)return toast("Nhập tên thành viên trước");data.members.push({name:n,role:$("#newRole").value.trim()||"Học sinh 11/1",icon:n.charAt(0).toUpperCase()});save();render();$("#newMember").value="";$("#newRole").value="";toast("Đã thêm thành viên")};
+$("#addEvent").onclick=()=>{let n=$("#newEvent").value.trim();if(!n)return toast("Nhập tên hoạt động trước");data.events.push({title:n,desc:"Hoạt động của tập thể 11/1",date:"KỶ NIỆM",day:"✦"});save();render();$("#newEvent").value="";toast("Đã thêm hoạt động")};
+$("#addHonor").onclick=()=>{let n=$("#newHonor").value.trim();if(!n)return toast("Nhập thành tích trước");data.honors.push({title:n,desc:"Thành tích đáng tự hào của lớp",icon:"🏅"});save();render();$("#newHonor").value="";toast("Đã thêm thành tích")};
+$("#addPhoto").onclick=()=>{let u=$("#newPhoto").value.trim();if(!/^https:\/\/.+/i.test(u))return toast("Hãy nhập đường dẫn ảnh bắt đầu bằng https://");data.photos.push({url:u,title:"Khoảnh khắc 11/1"});save();render();$("#newPhoto").value="";toast("Đã thêm ảnh")};
+$("#messageForm").onsubmit=e=>{e.preventDefault();messages.push({name:$("#msgName").value.trim(),title:$("#msgTitle").value.trim(),text:$("#msgText").value.trim(),time:new Date().toLocaleDateString("vi-VN")});localStorage.setItem("sonvong_class_messages",JSON.stringify(messages));render();e.target.reset();toast("Đã lưu lời nhắn trên thiết bị này")};
+$("#saveSpotify").onclick=()=>{let u=$("#spotifyLink").value.trim();if(!spotifyEmbed(u))return toast("Link Spotify chưa hợp lệ. Hãy dùng link open.spotify.com");spotifyUrl=u;localStorage.setItem("sonvong_spotify_url",u);render();$("#spotifyLink").value="";toast("Đã lưu trình phát Spotify")};
+$("#exportData").onclick=()=>{let blob=new Blob([JSON.stringify({data,messages},null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="du-lieu-lop-11-1.json";a.click();URL.revokeObjectURL(a.href)};
+$("#resetData").onclick=()=>{if(confirm("Khôi phục dữ liệu mẫu? Dữ liệu hiện tại sẽ bị thay thế.")){data=JSON.parse(JSON.stringify(seed));messages=[];save();localStorage.removeItem("sonvong_class_messages");render();toast("Đã khôi phục mẫu")}};
+</script>
+</body></html>
